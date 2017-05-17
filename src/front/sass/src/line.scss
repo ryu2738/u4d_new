@@ -1,0 +1,399 @@
+/*!
+* Ext JS Library 4.0
+* Copyright(c) 2006-2011 Sencha Inc.
+* licensing@sencha.com
+* http://www.sencha.com/license
+*/
+
+#poweredby {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  z-index: 15000;
+
+  /* IE 5-7 */
+  filter: alpha(opacity=70);
+  /* Netscape */
+  -moz-opacity: 0.7;
+  /* Safari 1.x */
+  -khtml-opacity: 0.7;
+  /* Good browsers */
+  opacity: 0.7;
+}
+
+#poweredby div {
+  position: relative;
+  width: 150px;
+  height: 25px;
+  background-image: url(images/powered-by-ext-js.png);
+  background-repeat: no-repeat;
+}
+
+/* The simple background image PNG does not work in IE6-8, but does in IE9 */
+.x-ie6 #poweredby div,
+.x-ie7 #poweredby div,
+.x-ie8 #poweredby div {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/powered-by-ext-js.png', sizingMethod='scale');
+}
+
+/*----------------------------------------------------
+  2017.01.12 : 유지준
+*/
+/*
+.x-panel-body-default{border-color:#cecece;color:black;font-size:13px;font-weight:300;font-family:helvetica,arial,verdana,sans-serif;border-width:1px;border-style:solid}
+.x-panel-default-framed{border-color:#174099;padding:0}
+.x-panel-header-default-framed{font-size:15px;border:1px solid #f5f5f5}
+.x-panel-header-title-default-framed{color:#ffffff;font-size:15px;font-weight:300;font-family:helvetica,arial,verdana,sans-serif;line-height:16px}
+.x-column-header-sort-DESC .x-column-header-text{background-image:url(images/grid/sort_desc.png)}body.x-border-layout-ct,div.x-border-layout-ct{background-color:#0a1a58}
+.x-window-default{-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px}
+.x-window-default{-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;padding:0;border-width:1px;border-style:solid;background-color:rgba(0, 0, 0, 0); }
+.x-window-header-default{font-size:15px;background-color:rgba(0,0,0,1)}
+.x-window-header-title-default{color:#ffffff;font-size:16px;font-weight:bold;font-family:helvetica,arial,verdana,sans-serif;line-height:16px}
+.x-window-header-default-top{-moz-border-radius-topleft:4px;-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-moz-border-radius-topright:4px;-webkit-border-top-right-radius:4px;border-top-right-radius:4px;-moz-border-radius-bottomright:0;-webkit-border-bottom-right-radius:0;border-bottom-right-radius:0;-moz-border-radius-bottomleft:0;-webkit-border-bottom-left-radius:0;border-bottom-left-radius:0;padding:9px 9px 6px 9px;border-width:1px 1px 1px 1px;border-style:solid;
+background-color: rgba( 182, 181,181, 0.5 );}
+
+.x-toolbar-default .x-tool-img{background-image:url(images/u4dshortcut/tool-sprites.png);background-color:white}.x-toolbar-footer .x-tool-img{background-image:url(images/u4dshortcut/tool-sprites.png);background-color:#e6e6e6}
+.x-toolbar-footer .x-tool-img{background-image:url(images/u4dshortcut/tool-sprites.png);background-color:#e6e6e6}
+.x-tip-default .x-tool-img{background-image:url(images/u4dshortcut/tool-sprites.png);background-color:#eaf3fa}
+.x-tip-form-invalid .x-tool-img{background-image:url(images/u4dshortcut/tool-sprites.png);background-color:#eaf3fa}
+.x-panel-header-light .x-tool-img{background-image:url(images/u4dshortcut/tool-sprites.png);background-color:white}
+.x-panel-header-light-framed .x-tool-img{background-image:url(images/u4dshortcut/tool-sprites.png);background-color:white}
+
+*/
+.x-tool-img{overflow:hidden;width:16px;height:16px;background-image:url(images/u4dshortcut/tool-sprites.png);margin:0;filter:alpha(opacity=80);opacity:.8;background-color:rgba(0, 0, 0, 0)}
+
+
+
+/*----------------------------------------------------
+    Start Button
+*/
+
+.ux-start-button-icon {
+  background-image: url(images/taskbar/sencha.gif) !important;
+  background-color: transparent;
+}
+
+.ux-start-button .x-btn-arrow {
+  background-image: none;
+}
+
+.ux-taskbar {
+  padding-left: 4px !important;
+}
+
+
+
+/*
+    Start Button (Black)
+*/
+
+.ux-desktop-black .ux-start-button {
+  height: 28px;
+  padding: 0px;
+  display: block;
+}
+
+.ux-desktop-black .ux-start-button em {
+  margin-top: 5px;
+}
+
+.ux-desktop-black .ux-start-button .x-btn-inner {
+  color: black;
+  font-size:11px;
+  font-weight: bold;
+}
+
+.ux-desktop-black .ux-start-button {
+  background-image: -moz-linear-gradient(center top , #E4F3FF, #D9EDFF 48%, #C2D8F2 52%, #C6DCF6);
+  border-radius: 8px 8px 8px 8px;
+  border-color: #81A4D0;
+}
+
+/*----------------------------------------------------
+    Start Menu
+*/
+
+.ux-start-menu-toolbar .x-btn-inner {
+  text-align: left;
+}
+
+.ux-start-menu-toolbar {
+  padding: 4px !important;
+}
+
+/*----------------------------------------------------
+    TaskBar
+*/
+
+/* Use high specificity selector to override default styling*/
+div.ux-taskbar div.x-toolbar {
+  background: transparent none;
+  border: 0 none;
+  padding: 0;
+}
+
+.ux-desktop-windowbar .x-btn-inner,
+.x-nbr .ux-desktop-windowbar .x-btn-icon-text-left button {
+  text-align: left !important;
+}
+
+/*
+    TaskBar (Black)
+*/
+
+.ux-desktop-black .ux-taskbar {
+  background: transparent url('images/taskbar/black/taskbar-start-panel-bg.gif') repeat-x left top;
+  border-color: transparent;
+  /*height: 30px;*/
+}
+
+.ux-desktop-black .ux-taskbar .x-splitter {
+  background: transparent url(images/taskbar/black/taskbar-split-h.gif) no-repeat scroll 0 -2px;
+}
+
+.ux-desktop-black .ux-taskbar .x-toolbar-text {
+  color: white !important;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-default-toolbar-small-over {
+  background-color: yellow;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-inner {
+  color: white;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-pressed .x-btn-inner, .ux-taskbar .x-btn-over .x-btn-inner {
+  color: black;
+}
+
+/*----------------------------------------------------
+    Tray Clock
+*/
+
+.ux-desktop-trayclock {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*----------------------------------------------------
+    Desktop DataView
+*/
+
+.ux-wallpaper {
+  background-color: #3d71b8;
+}
+
+.ux-wallpaper-tiled {
+  background-repeat: repeat;
+}
+
+.ux-desktop-shortcut {
+  cursor: pointer;
+  text-align: center;
+  padding: 8px;
+  margin: 8px;
+  width: 64px;
+}
+
+.ux-desktop-shortcut-icon {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.ux-desktop-shortcut-text {
+  font: normal 10px tahoma,arial,verdana,sans-serif;
+  text-decoration: none;
+  padding-top: 5px;
+  color: white;
+}
+
+.x-view-over .ux-desktop-shortcut-text {
+  text-decoration: underline;
+}
+
+
+/*----------------------------------------------------
+    Various icon classes
+*/
+
+.accordion-shortcut {
+  background-image: url(images/im48x48.png);
+}
+
+.cpu-shortcut {
+  background-image: url(images/statusLarge.png);
+}
+
+.grid-shortcut {
+  background-image: url(images/grid48x48.png);
+}
+
+.notepad-shortcut {
+  background-image: url(images/notepadLarge.png);
+  width: 46px;
+  height: 46px;
+}
+  // U4D
+.user-shortcut        {background-image:url(images/u4dshortcut/user48x48.png)}
+.user-add-shortcut    {background-image:url(images/u4dshortcut/addUser48x48.png)}
+.construction-shortcut{background-image:url(images/u4dshortcut/construction48x48.png)}
+.company-shortcut     {background-image:url(images/u4dshortcut/company48x48.png)}
+.product-shortcut     {background-image:url(images/u4dshortcut/product48x48.png)}
+.system-shortcut      {background-image:url(images/u4dshortcut/system48x48.png)}
+.device-shortcut      {background-image:url(images/u4dshortcut/device48x48.png)}
+.report-shortcut      {background-image:url(images/u4dshortcut/report48x48.png)}
+.statistic-shortcut   {background-image:url(images/u4dshortcut/statistic48x48.png)}
+.disaster-shortcut    {background-image:url(images/u4dshortcut/disast48x48.png)}
+.buildinfo-shortcut   {background-image:url(images/u4dshortcut/buildinfo48x48.png)}
+.pipeline-shortcut    {background-image:url(images/u4dshortcut/pipeline48x48.png)}
+.executive-shortcut   {background-image:url(images/u4dshortcut/executive48x48.png)}
+
+.construction-icon    {background-image:url(images/u4dshortcut/16/construction16x16.png)}
+.system-icon          {background-image:url(images/u4dshortcut/16/system16x16.png)}
+.device-icon          {background-image:url(images/u4dshortcut/16/device16x16.png)}
+.report-icon          {background-image:url(images/u4dshortcut/16/report16x16.png)}
+.company-icon         {background-image:url(images/u4dshortcut/16/company16x16.png)}
+.product-icon         {background-image:url(images/u4dshortcut/16/product16x16.png)}
+.user-icon            {background-image:url(images/u4dshortcut/16/user16x16.png)}
+.statistic-icon       {background-image:url(images/u4dshortcut/16/statistic16x16.png)}
+.pipeline-icon        {background-image:url(images/u4dshortcut/16/pipeline16x16.png)}
+.disaster-icon        {background-image:url(images/u4dshortcut/16/disast16x16.png)}
+.buildinfo-icon       {background-image:url(images/u4dshortcut/16/buildinfo16x16.png)}
+.executive-icon       {background-image:url(images/u4dshortcut/16/executive16x16.png)}
+.leak_icon            {background-image:url(images/u4dshortcut/16/leak16x16.png)}
+/*  
+.x-ie6 .accordion-shortcut {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/im48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .cpu-shortcut {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/statusLarge.png', sizingMethod='scale');
+}
+
+.x-ie6 .grid-shortcut {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/grid48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .notepad-shortcut {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/notepadLarge.png', sizingMethod='scale');
+}
+
+.x-ie6 .user-shortcut {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/u4dshortcut/user48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .construction-shortcut {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/u4dshortcut/construction48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .company-shortcut {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/u4dshortcut/company48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .product-shortcut {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/u4dshortcut/product48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .system-shortcut {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/u4dshortcut/system48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .device-shortcut {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/u4dshortcut/device48x48.png', sizingMethod='scale');
+}
+
+.x-ie6 .report-shortcut {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/u4dshortcut/report48x48.png', sizingMethod='scale');
+}
+*/
+.video {
+  background-image: url(images/gears.gif);
+}
+
+.bogus {
+  background-image: url( images/bogus.png ) !important;
+}
+
+.notepad {
+  background-image: url( images/bogus.png ) !important;
+}
+
+.logout {
+  background-image: url( images/logout.gif ) !important;
+}
+
+.settings {
+  background-image: url( images/gears.gif ) !important;
+}
+
+
+.icon-grid {
+  background-image:url( images/grid.png ) !important;
+}
+.add {
+  background-image:url(images/icons/fam/add.gif) !important;
+}
+.option {
+  background-image:url(images/icons/fam/plugin.gif) !important;
+}
+.remove {
+  background-image:url(images/icons/fam/delete.gif) !important;
+}
+.save {
+  background-image:url(images/icons/save.gif) !important;
+}
+.accordion {
+  background-image:url(images/accordian.gif) !important;
+}
+.tabs {
+  background-image:url(images/tabs.gif) !important;
+}
+
+/*----------------------------------------------------
+    IM window icons
+*/
+
+.user {
+  background-image:url( images/icons/fam/user.gif ) !important;
+}
+
+.user-add {
+  background-image:url(images/icons/fam/user_add.gif) !important;
+}
+
+.user-delete {
+  background-image:url(images/icons/fam/user_delete.gif) !important;
+}
+
+.connect {
+  background-image:url(images/icons/fam/connect.gif) !important;
+}
+
+.user-girl {
+  background-image:url(images/icons/fam/user_female.gif) !important;
+}
+
+.user-kid {
+  background-image:url(images/icons/fam/user_green.gif) !important;
+}
+
+.user-suit {
+  background-image:url(images/icons/fam/user_suit.gif) !important;
+}

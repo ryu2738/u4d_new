@@ -1,0 +1,24 @@
+{
+"shortcut":[
+    {"name": "관망도", "iconCls": "pipeline-shortcut", "module": "map-module"},
+    {"name": "관망도2222", "iconCls": "pipeline-shortcut", "module": "map-module"}
+    ],
+"mapLayer":[
+    {"name":"baseUrl",   "value":"http://u4d.chahoo.co.kr:8080/geoserver/linedemo/wms"},
+    {"name":"baseLayer", "value":"linedemo:linedemo"},
+    {"name":"qrLayer",   "value":"linedemo:view_qr"},
+    {"name":"linkLayer", "value":"linedemo:view_link"},
+    {"name":"accLayer",  "value":"linedemo:tb_acc_rep"},
+    {"name":"zoneLayer", "value":"linedemo:tb_zone_mgmt"}
+    ],
+"extent":[
+    {"name":"minx",   "value":127.10211359028553},
+    {"name":"miny",   "value":37.396883921327806},
+    {"name":"maxx",   "value":127.11211415158583},
+    {"name":"maxy",   "value":37.40688403837299}
+    ],
+"cener":[
+    {"name":"x",   "value":127.1097403},
+    {"name":"y",   "value":37.40177947}
+    ]    
+}

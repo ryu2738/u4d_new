@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - u4d_2.5@localhost" uuid="274127d5-2437-46e0-a392-dd57d9f48a23">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>postgres.pg_catalog postgres.public</schema-pattern>
+      <default-schemas>postgres.public</default-schemas>
+    </data-source>
+    <data-source name="u4d_samsung/Hibernate" uuid="c9987548-ba04-4fa5-b603-7d628156b6d5">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>u4d_samsung.pg_catalog u4d_samsung.public</schema-pattern>
+      <default-schemas>u4d_samsung.public</default-schemas>
+    </data-source>
+    <data-source name="MySQL - u4d_p_prt_schema@u4d.chahoo.co.kr" uuid="0d257d62-8740-4c7f-9dce-b9187c800fd9">
+      <secret-storage>memory</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>u4d_p_prt_schema.*</schema-pattern>
+      <default-schemas>u4d_p_prt_schema.*</default-schemas>
+    </data-source>
+    <data-source name="SQL Server (Microsoft) - @localhost" uuid="e1f6e6ad-c0df-4b7c-950e-eff663becac9">
+      <secret-storage>memory</secret-storage>
+      <domain-auth>true</domain-auth>
+      <schema-pattern>master.*</schema-pattern>
+      <default-schemas>master.*</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+.x-grid-editor .x-form-cb-wrap {
+  text-align: center; }
+
+.x-grid-editor .x-form-cb {
+  position: static; }
+
+.x-grid-editor .x-form-display-field {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden; }
+.x-grid-editor div.x-form-action-col-field {
+  line-height: 0; }
+
+.x-grid-row-editor-wrap {
+  position: absolute;
+  overflow: visible;
+  z-index: 2; }
+
+.x-grid-row-editor {
+  position: absolute; }
+
+.x-grid-row-editor-buttons {
+  position: absolute;
+  white-space: nowrap; }
+
+.x-grid-row-expander {
+  font-size: 0;
+  line-height: 0; }

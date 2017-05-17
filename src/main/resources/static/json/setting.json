@@ -1,0 +1,31 @@
+{
+"shortcut":[
+    {"name": "관망도",     "iconCls": "pipeline-shortcut", "module": "map-module"},
+    {"name": "시공정보",   "iconCls": "buildinfo-shortcut", "module": "buildInfo-module"}
+    ],
+"mapLayer":{
+    "baseUrl":"http://u4d.chahoo.co.kr:8080/geoserver/linedemo/wms",
+    "baseLayer":"linedemo:linedemo",
+    "qrLayer":"linedemo:view_qr",
+    "linkLayer":"linedemo:view_link",
+    "accLayer":"linedemo:tb_acc_rep",
+    "zoneLayer":"linedemo:tb_zone_mgmt"
+    },
+"extent":{
+    "minX":127.10211359028553,
+    "minY":37.396883921327806,
+    "maxX":127.11211415158583,
+    "maxY":37.40688403837299
+    },
+"zoomLevel":22,
+
+"apiUrls":[{
+    "id": "qrList",
+    "url": {
+        "create" : "http://localhost:8080/api/buildInfo/qrs",
+        "destroy": "http://localhost:8080/api/buildInfo/qrs",
+        "read"   : "http://localhost:8080/api/buildInfo/qrs",
+        "update" : "http://localhost:8080/api/buildInfo/qrs"
+        }
+    }]
+}
